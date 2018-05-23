@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="HTML5,JavaScript,css3," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1&amp;lt;a name=&quot;actionSheet&quot;&amp;gt;&amp;lt;/a&amp;gt; actionSheet(menus, actions, [options])actionsheet 弹出式菜单 Kind: global function      Param Type Description     menus array 上层的选项   menus[].label string 选项的文字   m">
+<meta name="keywords" content="HTML5,JavaScript,css3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="weui.js api文档">
+<meta property="og:url" content="https://caitianxu.github.io/2017/12/22/22/index.html">
+<meta property="og:site_name" content="栩栩如生">
+<meta property="og:description" content="1&amp;lt;a name=&quot;actionSheet&quot;&amp;gt;&amp;lt;/a&amp;gt; actionSheet(menus, actions, [options])actionsheet 弹出式菜单 Kind: global function      Param Type Description     menus array 上层的选项   menus[].label string 选项的文字   m">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-23T08:56:58.497Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="weui.js api文档">
+<meta name="twitter:description" content="1&amp;lt;a name=&quot;actionSheet&quot;&amp;gt;&amp;lt;/a&amp;gt; actionSheet(menus, actions, [options])actionsheet 弹出式菜单 Kind: global function      Param Type Description     menus array 上层的选项   menus[].label string 选项的文字   m">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://caitianxu.github.io/2017/12/22/22/"/>
+
+
+
+
+
+  <title>weui.js api文档 | 栩栩如生</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">栩栩如生</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">专心致志敲代码、说得太多都是废话</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://caitianxu.github.io/2017/12/22/22/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Henry.Cai">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="栩栩如生">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">weui.js api文档</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-22T17:04:30+08:00">
+                2017-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端UI框架/" itemprop="url" rel="index">
+                    <span itemprop="name">前端UI框架</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"actionSheet"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="actionSheet-menus-actions-options"><a href="#actionSheet-menus-actions-options" class="headerlink" title="actionSheet(menus, actions, [options])"></a>actionSheet(menus, actions, [options])</h2><p>actionsheet 弹出式菜单</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>menus</td>
+<td><code>array</code></td>
+<td>上层的选项</td>
+</tr>
+<tr>
+<td>menus[].label</td>
+<td><code>string</code></td>
+<td>选项的文字</td>
+</tr>
+<tr>
+<td>menus[].onClick</td>
+<td><code>function</code></td>
+<td>选项点击时的回调</td>
+</tr>
+<tr>
+<td>actions</td>
+<td><code>array</code></td>
+<td>下层的选项</td>
+</tr>
+<tr>
+<td>actions[].label</td>
+<td><code>string</code></td>
+<td>选项的文字</td>
+</tr>
+<tr>
+<td>actions[].onClick</td>
+<td><code>function</code></td>
+<td>选项点击时的回调</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>object</code></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td>自定义类名</td>
+</tr>
+<tr>
+<td>[options.onClose]</td>
+<td><code>function</code></td>
+<td>actionSheet关闭后的回调</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">weui.actionSheet([</span><br><span class="line">    &#123;</span><br><span class="line">        label: <span class="string">'拍照'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'拍照'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        label: <span class="string">'从相册选择'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'从相册选择'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        label: <span class="string">'其他'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'其他'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">], [</span><br><span class="line">    &#123;</span><br><span class="line">        label: <span class="string">'取消'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'取消'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">], &#123;</span><br><span class="line">    className: <span class="string">'custom-classname'</span>,</span><br><span class="line">    onClose: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'关闭'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"alert"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="alert-content-yes-options"><a href="#alert-content-yes-options" class="headerlink" title="alert(content, [yes], [options])"></a>alert(content, [yes], [options])</h2><p>alert 警告弹框，功能类似于浏览器自带的 alert 弹框，用于提醒、警告用户简单扼要的信息，只有一个“确认”按钮，点击“确认”按钮后关闭弹框。</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td><code>string</code></td>
+<td>弹窗内容</td>
+</tr>
+<tr>
+<td>[yes]</td>
+<td><code>function</code></td>
+<td>点击确定按钮的回调</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>object</code></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.title]</td>
+<td><code>string</code></td>
+<td>弹窗的标题</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td>自定义类名</td>
+</tr>
+<tr>
+<td>[options.buttons]</td>
+<td><code>array</code></td>
+<td>按钮配置项，详情参考dialog</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">weui.alert(<span class="string">'普通的alert'</span>);</span><br><span class="line">weui.alert(<span class="string">'带回调的alert'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'ok'</span>) &#125;);</span><br><span class="line"><span class="keyword">var</span> alertDom = weui.alert(<span class="string">'手动关闭的alert'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 不关闭弹窗，可用alertDom.hide()来手动关闭</span></span><br><span class="line">&#125;);</span><br><span class="line">weui.alert(<span class="string">'自定义标题的alert'</span>, &#123; <span class="attr">title</span>: <span class="string">'自定义标题'</span> &#125;);</span><br><span class="line">weui.alert(<span class="string">'带回调的自定义标题的alert'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'ok'</span>)</span><br><span class="line">&#125;, &#123;</span><br><span class="line">   title: <span class="string">'自定义标题'</span></span><br><span class="line">&#125;);</span><br><span class="line">weui.alert(<span class="string">'自定义按钮的alert'</span>, &#123;</span><br><span class="line">    title: <span class="string">'自定义按钮的alert'</span>,</span><br><span class="line">    buttons: [&#123;</span><br><span class="line">        label: <span class="string">'OK'</span>,</span><br><span class="line">        type: <span class="string">'primary'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'ok'</span>) &#125;</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 多次使用</span></span><br><span class="line"><span class="keyword">var</span> alert = weui.alert(<span class="string">'hello'</span>);</span><br><span class="line">alert.hide(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    weui.alert(<span class="string">'world'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"confirm"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="confirm-content-yes-no-options"><a href="#confirm-content-yes-no-options" class="headerlink" title="confirm(content, [yes], [no], [options])"></a>confirm(content, [yes], [no], [options])</h2><p>确认弹窗</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td><code>string</code></td>
+<td>弹窗内容</td>
+</tr>
+<tr>
+<td>[yes]</td>
+<td><code>function</code></td>
+<td>点击确定按钮的回调</td>
+</tr>
+<tr>
+<td>[no]</td>
+<td><code>function</code></td>
+<td>点击取消按钮的回调</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>object</code></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.title]</td>
+<td><code>string</code></td>
+<td>弹窗的标题</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td>自定义类名</td>
+</tr>
+<tr>
+<td>[options.buttons]</td>
+<td><code>array</code></td>
+<td>按钮配置项，详情参考dialog</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">weui.confirm(<span class="string">'普通的confirm'</span>);</span><br><span class="line">weui.confirm(<span class="string">'自定义标题的confirm'</span>, &#123; <span class="attr">title</span>: <span class="string">'自定义标题'</span> &#125;);</span><br><span class="line">weui.confirm(<span class="string">'带回调的confirm'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'yes'</span>) &#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'no'</span>) &#125;);</span><br><span class="line"><span class="keyword">var</span> confirmDom = weui.confirm(<span class="string">'手动关闭的confirm'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 不关闭弹窗，可用confirmDom.hide()来手动关闭</span></span><br><span class="line">&#125;);</span><br><span class="line">weui.confirm(<span class="string">'带回调的自定义标题的confirm'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'yes'</span>) &#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'no'</span>) &#125;, &#123;</span><br><span class="line">    title: <span class="string">'自定义标题'</span></span><br><span class="line">&#125;);</span><br><span class="line">weui.confirm(<span class="string">'自定义按钮的confirm'</span>, &#123;</span><br><span class="line">    title: <span class="string">'自定义按钮的confirm'</span>,</span><br><span class="line">    buttons: [&#123;</span><br><span class="line">        label: <span class="string">'NO'</span>,</span><br><span class="line">        type: <span class="string">'default'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'no'</span>) &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        label: <span class="string">'YES'</span>,</span><br><span class="line">        type: <span class="string">'primary'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'yes'</span>) &#125;</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"dialog"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="dialog-options"><a href="#dialog-options" class="headerlink" title="dialog([options])"></a>dialog([options])</h2><p>dialog，弹窗，alert和confirm的父类</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[options]</td>
+<td><code>object</code></td>
+<td></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.title]</td>
+<td><code>string</code></td>
+<td></td>
+<td>弹窗的标题</td>
+</tr>
+<tr>
+<td>[options.content]</td>
+<td><code>string</code></td>
+<td></td>
+<td>弹窗的内容</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td></td>
+<td>弹窗的自定义类名</td>
+</tr>
+<tr>
+<td>[options.buttons]</td>
+<td><code>array</code></td>
+<td></td>
+<td>按钮配置项</td>
+</tr>
+<tr>
+<td>[options.buttons[].label]</td>
+<td><code>string</code></td>
+<td><code>&quot;确定&quot;</code></td>
+<td>按钮的文字</td>
+</tr>
+<tr>
+<td>[options.buttons[].type]</td>
+<td><code>string</code></td>
+<td><code>&quot;primary&quot;</code></td>
+<td>按钮的类型 [primary, default]</td>
+</tr>
+<tr>
+<td>[options.buttons[].onClick]</td>
+<td><code>function</code></td>
+<td><code>$.noop</code></td>
+<td>按钮的回调</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">weui.dialog(&#123;</span><br><span class="line">    title: <span class="string">'dialog标题'</span>,</span><br><span class="line">    content: <span class="string">'dialog内容'</span>,</span><br><span class="line">    className: <span class="string">'custom-classname'</span>,</span><br><span class="line">    buttons: [&#123;</span><br><span class="line">        label: <span class="string">'取消'</span>,</span><br><span class="line">        type: <span class="string">'default'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert(<span class="string">'取消'</span>) &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        label: <span class="string">'确定'</span>,</span><br><span class="line">        type: <span class="string">'primary'</span>,</span><br><span class="line">        onClick: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert(<span class="string">'确定'</span>) &#125;</span><br><span class="line">    &#125;]</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 主动关闭</span></span><br><span class="line"><span class="keyword">var</span> $dialog = weui.dialog(&#123;...&#125;);</span><br><span class="line">$dialog.hide(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="string">'`dialog` has been hidden'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h2 id="form"><a href="#form" class="headerlink" title="form"></a>form</h2><h3 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#validate"</span>&gt;</span>validate(selector, callback, [options])<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>表单校验<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#checkIfBlur"</span>&gt;</span>checkIfBlur(selector, [options])<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>checkIfBlur 当表单的input失去焦点时校验<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#showErrorTips"</span>&gt;</span>showErrorTips(error)<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>showErrorTips 显示错误提示<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dt</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#hideErrorTips"</span>&gt;</span>hideErrorTips(ele)<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dd</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>hideErrorTips 隐藏错误提示<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"validate"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="validate-selector-callback-options"><a href="#validate-selector-callback-options" class="headerlink" title="validate(selector, callback, [options])"></a>validate(selector, callback, [options])</h4><p>表单校验</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector</td>
+<td><code>string</code></td>
+<td>表单的selector</td>
+</tr>
+<tr>
+<td>callback</td>
+<td><code>function</code></td>
+<td>校验后的回调</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>Object</code></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.regexp]</td>
+<td><code>object</code></td>
+<td>表单所需的正则表达式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong>  </p>
+<h5 id="普通input的HTML"><a href="#普通input的HTML" class="headerlink" title="普通input的HTML"></a>普通input的HTML</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tel"</span> <span class="attr">required</span> <span class="attr">pattern</span>=<span class="string">"[0-9]&#123;11&#125;"</span> <span class="attr">placeholder</span>=<span class="string">"输入你现在的手机号"</span> <span class="attr">emptyTips</span>=<span class="string">"请输入手机号"</span> <span class="attr">notMatchTips</span>=<span class="string">"请输入正确的手机号"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">required</span> <span class="attr">pattern</span>=<span class="string">"REG_IDNUM"</span> <span class="attr">placeholder</span>=<span class="string">"输入你的身份证号码"</span> <span class="attr">emptyTips</span>=<span class="string">"请输入身份证号码"</span> <span class="attr">notMatchTips</span>=<span class="string">"请输入正确的身份证号码"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>required 表示需要校验</li>
+<li>pattern 表示校验的正则，不填则进行为空校验。当以REG_开头时，则获取校验时传入的正则。如<code>pattern=&quot;REG_IDNUM&quot;</code>，则需要在调用相应方法时传入<code>{regexp:{IDNUM: /(?:^\d{15}$)|(?:^\d{18}$)|^\d{17}[\dXx]$/}}</code>，详情请看下面<code>checkIfBlur</code>和<code>validate</code></li>
+<li>报错的wording会从 emptyTips | notMatchTips | tips | placeholder 里获得<br><br></li>
+</ul>
+<h5 id="radio"><a href="#radio" class="headerlink" title="radio"></a>radio</h5><p>radio需要检验，只需把参数写在同一表单下，同name的第一个元素即可。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"male"</span> <span class="attr">name</span>=<span class="string">"sex"</span> <span class="attr">required</span> <span class="attr">tips</span>=<span class="string">"请选择性别"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">value</span>=<span class="string">"female"</span> <span class="attr">name</span>=<span class="string">"sex"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><br></p>
+<h5 id="checkbox"><a href="#checkbox" class="headerlink" title="checkbox"></a>checkbox</h5><p>checkbox需要校验，只需把参数写在同一表单下，同name的第一个元素即可。<br>pattern 规定选择个数，用法与正则一致，例如：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"assistance"</span> <span class="attr">value</span>=<span class="string">"黄药师"</span> <span class="attr">required</span> <span class="attr">pattern</span>=<span class="string">"&#123;1,2&#125;"</span> <span class="attr">tips</span>=<span class="string">"请勾选1-2个敲码助手"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"assistance"</span> <span class="attr">value</span>=<span class="string">"欧阳锋"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"assistance"</span> <span class="attr">value</span>=<span class="string">"段智兴"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"assistance"</span> <span class="attr">value</span>=<span class="string">"洪七公"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>{1,}   至少选择1个</li>
+<li>{1,2}  选择1-2个</li>
+<li>这里不会出现{0,}这种情况，因为有required就表示必选。否则直接去掉required即可。<br><br></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// weui.form.validate('#form', function(error)&#123; console.log(error);&#125;); // error: &#123;dom:[Object], msg:[String]&#125;</span></span><br><span class="line">weui.form.validate(<span class="string">'#form'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!error) &#123;</span><br><span class="line">        <span class="keyword">var</span> loading = weui.loading(<span class="string">'提交中...'</span>);</span><br><span class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            loading.hide();</span><br><span class="line">            weui.toast(<span class="string">'提交成功'</span>, <span class="number">3000</span>);</span><br><span class="line">        &#125;, <span class="number">1500</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// return true; // 当return true时，不会显示错误</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">    regexp: &#123;</span><br><span class="line">        IDNUM: <span class="regexp">/(?:^\d&#123;15&#125;$)|(?:^\d&#123;18&#125;$)|^\d&#123;17&#125;[\dXx]$/</span>,</span><br><span class="line">        VCODE: <span class="regexp">/^.&#123;4&#125;$/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"checkIfBlur"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="checkIfBlur-selector-options"><a href="#checkIfBlur-selector-options" class="headerlink" title="checkIfBlur(selector, [options])"></a>checkIfBlur(selector, [options])</h4><p>checkIfBlur 当表单的input失去焦点时校验</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector</td>
+<td><code>string</code></td>
+<td>表单的selector</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>Object</code></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.regexp]</td>
+<td><code>object</code></td>
+<td>表单所需的正则表达式</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">weui.form.checkIfBlur(<span class="string">'#form'</span>, &#123;</span><br><span class="line">    regexp: &#123;</span><br><span class="line">        IDNUM: <span class="regexp">/(?:^\d&#123;15&#125;$)|(?:^\d&#123;18&#125;$)|^\d&#123;17&#125;[\dXx]$/</span>,</span><br><span class="line">        VCODE: <span class="regexp">/^.&#123;4&#125;$/</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"showErrorTips"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="showErrorTips-error"><a href="#showErrorTips-error" class="headerlink" title="showErrorTips(error)"></a>showErrorTips(error)</h4><p>showErrorTips 显示错误提示</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>error</td>
+<td><code>Object</code></td>
+<td>错误数据</td>
+</tr>
+<tr>
+<td>error.ele</td>
+<td><code>string</code></td>
+<td>出错了的dom元素</td>
+</tr>
+<tr>
+<td>error.msg</td>
+<td><code>string</code></td>
+<td>出错了的msg。会根据此<code>msg</code>找到对应的<code>Tips</code>（比如<code>msg</code>是<code>empty</code>），那么<code>ele</code>上的<code>emptyTips</code>就会以<code>topTips</code>显示</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">weui.form.showErrorTips(&#123;</span><br><span class="line">    ele: <span class="built_in">document</span>.getElementById(<span class="string">"xxxInput"</span>)</span><br><span class="line">    msg: <span class="string">'empty'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"hideErrorTips"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="hideErrorTips-ele"><a href="#hideErrorTips-ele" class="headerlink" title="hideErrorTips(ele)"></a>hideErrorTips(ele)</h4><p>hideErrorTips 隐藏错误提示</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ele</td>
+<td><code>Object</code></td>
+<td>dom元素</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">weui.form.hideErrorTips(<span class="built_in">document</span>.getElementById(<span class="string">"xxxInput"</span>));</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"gallery"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="gallery-url-options"><a href="#gallery-url-options" class="headerlink" title="gallery(url, [options])"></a>gallery(url, [options])</h2><p>gallery 带删除按钮的图片预览，主要是配合图片上传使用</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td><code>string</code></td>
+<td>gallery显示的图片的url</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>object</code></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td>自定义类名</td>
+</tr>
+<tr>
+<td>[options.onDelete]</td>
+<td><code>function</code></td>
+<td>点击删除图片时的回调</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gallery = weui.gallery(url, &#123;</span><br><span class="line">    className: <span class="string">'custom-classname'</span>,</span><br><span class="line">    onDelete: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(confirm(<span class="string">'确定删除该图片？'</span>))&#123; <span class="built_in">console</span>.log(<span class="string">'删除'</span>); &#125;</span><br><span class="line">        gallery.hide(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">             <span class="built_in">console</span>.log(<span class="string">'`gallery` has been hidden'</span>);</span><br><span class="line">         &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"loading"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="loading-content-options"><a href="#loading-content-options" class="headerlink" title="loading(content, [options])"></a>loading(content, [options])</h2><p>loading</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td><code>string</code></td>
+<td>loading的文字</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>object</code></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td>自定义类名</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> loading = weui.loading(<span class="string">'loading'</span>, &#123;</span><br><span class="line">    className: <span class="string">'custom-classname'</span></span><br><span class="line">&#125;);</span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    loading.hide(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(<span class="string">'`loading` has been hidden'</span>);</span><br><span class="line">     &#125;);</span><br><span class="line">&#125;, <span class="number">3000</span>);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Functions-1"><a href="#Functions-1" class="headerlink" title="Functions"></a>Functions</h3><dl><br><dt><a href="#picker">picker(items, options)</a></dt><br><dd><p>picker 多列选择器。</p><br></dd><br><dt><a href="#datePicker">datePicker(options)</a></dt><br><dd><p>datePicker 时间选择器，由picker拓展而来，提供年、月、日的选择。</p><br></dd><br></dl>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"picker"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="picker-items-options"><a href="#picker-items-options" class="headerlink" title="picker(items, options)"></a>picker(items, options)</h2><p>picker 多列选择器。</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>items</td>
+<td><code>array</code></td>
+<td></td>
+<td>picker的数据，即用于生成picker的数据，picker的层级可以自己定义，但建议最多三层。数据格式参考example。</td>
+</tr>
+<tr>
+<td>options</td>
+<td><code>Object</code></td>
+<td></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.depth]</td>
+<td><code>number</code></td>
+<td></td>
+<td>picker深度(也就是picker有多少列) 取值为1-3。如果为空，则取items第一项的深度。</td>
+</tr>
+<tr>
+<td>[options.id]</td>
+<td><code>string</code></td>
+<td><code>&quot;default&quot;</code></td>
+<td>作为picker的唯一标识，作用是以id缓存当时的选择。（当你想每次传入的defaultValue都是不一样时，可以使用不同的id区分）</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td></td>
+<td>自定义类名</td>
+</tr>
+<tr>
+<td>[options.container]</td>
+<td><code>string</code></td>
+<td></td>
+<td>指定容器</td>
+</tr>
+<tr>
+<td>[options.defaultValue]</td>
+<td><code>array</code></td>
+<td></td>
+<td>默认选项的value数组</td>
+</tr>
+<tr>
+<td>[options.onChange]</td>
+<td><code>function</code></td>
+<td></td>
+<td>在picker选中的值发生变化的时候回调</td>
+</tr>
+<tr>
+<td>[options.onConfirm]</td>
+<td><code>function</code></td>
+<td></td>
+<td>在点击”确定”之后的回调。回调返回选中的结果(Array)，数组长度依赖于picker的层级。</td>
+</tr>
+<tr>
+<td>[options.onClose]</td>
+<td><code>function</code></td>
+<td></td>
+<td>picker关闭后的回调</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 单列picker</span></span><br><span class="line">weui.picker([</span><br><span class="line">&#123;</span><br><span class="line">    label: <span class="string">'飞机票'</span>,</span><br><span class="line">    value: <span class="number">0</span>,</span><br><span class="line">    disabled: <span class="literal">true</span> <span class="comment">// 不可用</span></span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    label: <span class="string">'火车票'</span>,</span><br><span class="line">    value: <span class="number">1</span></span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    label: <span class="string">'汽车票'</span>,</span><br><span class="line">    value: <span class="number">3</span></span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    label: <span class="string">'公车票'</span>,</span><br><span class="line">    value: <span class="number">4</span>,</span><br><span class="line">&#125;</span><br><span class="line">], &#123;</span><br><span class="line">   className: <span class="string">'custom-classname'</span>,</span><br><span class="line">   container: <span class="string">'body'</span>,</span><br><span class="line">   defaultValue: [<span class="number">3</span>],</span><br><span class="line">   onChange: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(result)</span><br><span class="line">   &#125;,</span><br><span class="line">   onConfirm: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(result)</span><br><span class="line">   &#125;,</span><br><span class="line">   id: <span class="string">'singleLinePicker'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 多列picker</span></span><br><span class="line">weui.picker([</span><br><span class="line">    &#123;</span><br><span class="line">        label: <span class="string">'1'</span>,</span><br><span class="line">        value: <span class="string">'1'</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        label: <span class="string">'2'</span>,</span><br><span class="line">        value: <span class="string">'2'</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        label: <span class="string">'3'</span>,</span><br><span class="line">        value: <span class="string">'3'</span></span><br><span class="line">    &#125;</span><br><span class="line">], [</span><br><span class="line">    &#123;</span><br><span class="line">        label: <span class="string">'A'</span>,</span><br><span class="line">        value: <span class="string">'A'</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        label: <span class="string">'B'</span>,</span><br><span class="line">        value: <span class="string">'B'</span></span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        label: <span class="string">'C'</span>,</span><br><span class="line">        value: <span class="string">'C'</span></span><br><span class="line">    &#125;</span><br><span class="line">], &#123;</span><br><span class="line">    defaultValue: [<span class="string">'3'</span>, <span class="string">'A'</span>],</span><br><span class="line">    onChange: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(result);</span><br><span class="line">    &#125;,</span><br><span class="line">    onConfirm: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(result);</span><br><span class="line">    &#125;,</span><br><span class="line">    id: <span class="string">'multiPickerBtn'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 级联picker</span></span><br><span class="line">weui.picker([</span><br><span class="line">&#123;</span><br><span class="line">    label: <span class="string">'飞机票'</span>,</span><br><span class="line">    value: <span class="number">0</span>,</span><br><span class="line">    children: [</span><br><span class="line">        &#123;</span><br><span class="line">            label: <span class="string">'经济舱'</span>,</span><br><span class="line">            value: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            label: <span class="string">'商务舱'</span>,</span><br><span class="line">            value: <span class="number">2</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    label: <span class="string">'火车票'</span>,</span><br><span class="line">    value: <span class="number">1</span>,</span><br><span class="line">    children: [</span><br><span class="line">        &#123;</span><br><span class="line">            label: <span class="string">'卧铺'</span>,</span><br><span class="line">            value: <span class="number">1</span>,</span><br><span class="line">            disabled: <span class="literal">true</span> <span class="comment">// 不可用</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            label: <span class="string">'坐票'</span>,</span><br><span class="line">            value: <span class="number">2</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            label: <span class="string">'站票'</span>,</span><br><span class="line">            value: <span class="number">3</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    label: <span class="string">'汽车票'</span>,</span><br><span class="line">    value: <span class="number">3</span>,</span><br><span class="line">    children: [</span><br><span class="line">        &#123;</span><br><span class="line">            label: <span class="string">'快班'</span>,</span><br><span class="line">            value: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            label: <span class="string">'普通'</span>,</span><br><span class="line">            value: <span class="number">2</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line">], &#123;</span><br><span class="line">   className: <span class="string">'custom-classname'</span>,</span><br><span class="line">   container: <span class="string">'body'</span>,</span><br><span class="line">   defaultValue: [<span class="number">1</span>, <span class="number">3</span>],</span><br><span class="line">   onChange: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(result)</span><br><span class="line">   &#125;,</span><br><span class="line">   onConfirm: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(result)</span><br><span class="line">   &#125;,</span><br><span class="line">   id: <span class="string">'doubleLinePicker'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"datePicker"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="datePicker-options"><a href="#datePicker-options" class="headerlink" title="datePicker(options)"></a>datePicker(options)</h2><p>datePicker 时间选择器，由picker拓展而来，提供年、月、日的选择。</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>options</td>
+<td></td>
+<td></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.id]</td>
+<td><code>string</code></td>
+<td><code>&quot;datePicker&quot;</code></td>
+<td>作为picker的唯一标识</td>
+</tr>
+<tr>
+<td>[options.start]</td>
+<td><code>number</code> &#124; <code>string</code> &#124; <code>Date</code></td>
+<td><code>2000</code></td>
+<td>起始年份，如果是 <code>Number</code> 类型，表示起始年份；如果是 <code>String</code> 类型，格式为 ‘YYYY-MM-DD’；如果是 <code>Date</code> 类型，就传一个 Date</td>
+</tr>
+<tr>
+<td>[options.end]</td>
+<td><code>number</code> &#124; <code>string</code> &#124; <code>Date</code></td>
+<td><code>2030</code></td>
+<td>结束年份，同上</td>
+</tr>
+<tr>
+<td>[options.cron]</td>
+<td><code>string</code></td>
+<td><code>&quot;<em> </em> *&quot;</code></td>
+<td>cron 表达式，三位，分别是 dayOfMonth[1-31]，month[1-12] 和 dayOfWeek[0-6]（周日-周六）</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td></td>
+<td>自定义类名</td>
+</tr>
+<tr>
+<td>[options.defaultValue]</td>
+<td><code>array</code></td>
+<td></td>
+<td>默认选项的value数组, 如 [1991, 6, 9]</td>
+</tr>
+<tr>
+<td>[options.onChange]</td>
+<td><code>function</code></td>
+<td></td>
+<td>在picker选中的值发生变化的时候回调</td>
+</tr>
+<tr>
+<td>[options.onConfirm]</td>
+<td><code>function</code></td>
+<td></td>
+<td>在点击”确定”之后的回调。回调返回选中的结果(Array)，数组长度依赖于picker的层级。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 示例1：</span></span><br><span class="line">weui.datePicker(&#123;</span><br><span class="line">    start: <span class="number">1990</span>,</span><br><span class="line">    end: <span class="number">2000</span>,</span><br><span class="line">    defaultValue: [<span class="number">1991</span>, <span class="number">6</span>, <span class="number">9</span>],</span><br><span class="line">    onChange: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(result);</span><br><span class="line">    &#125;,</span><br><span class="line">    onConfirm: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(result);</span><br><span class="line">    &#125;,</span><br><span class="line">    id: <span class="string">'datePicker'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 示例2：</span></span><br><span class="line">weui.datePicker(&#123;</span><br><span class="line">     start: <span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="comment">// 从今天开始</span></span><br><span class="line">     end: <span class="number">2030</span>,</span><br><span class="line">     defaultValue: [<span class="number">2020</span>, <span class="number">6</span>, <span class="number">9</span>],</span><br><span class="line">     onChange: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(result);</span><br><span class="line">     &#125;,</span><br><span class="line">     onConfirm: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(result);</span><br><span class="line">     &#125;,</span><br><span class="line">     id: <span class="string">'datePicker'</span></span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 示例3：</span></span><br><span class="line">weui.datePicker(&#123;</span><br><span class="line">     start: <span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="comment">// 从今天开始</span></span><br><span class="line">     end: <span class="number">2030</span>,</span><br><span class="line">     cron: <span class="string">'* * 0,6'</span>,  <span class="comment">// 每逢周日、周六</span></span><br><span class="line">     onChange: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(result);</span><br><span class="line">     &#125;,</span><br><span class="line">     onConfirm: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(result);</span><br><span class="line">     &#125;,</span><br><span class="line">     id: <span class="string">'datePicker'</span></span><br><span class="line"> &#125;);</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 示例4：</span></span><br><span class="line">weui.datePicker(&#123;</span><br><span class="line">     start: <span class="keyword">new</span> <span class="built_in">Date</span>(), <span class="comment">// 从今天开始</span></span><br><span class="line">     end: <span class="number">2030</span>,</span><br><span class="line">     cron: <span class="string">'1-10 * *'</span>,  <span class="comment">// 每月1日-10日</span></span><br><span class="line">     onChange: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(result);</span><br><span class="line">     &#125;,</span><br><span class="line">     onConfirm: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(result);</span><br><span class="line">     &#125;,</span><br><span class="line">     id: <span class="string">'datePicker'</span></span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"slider"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="slider-selector-options"><a href="#slider-selector-options" class="headerlink" title="slider(selector, [options])"></a>slider(selector, [options])</h2><p>slider slider滑块，单位是百分比。注意，因为需要获取slider的长度，所以必须要在slider可见的情况下来调用。</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector</td>
+<td><code>string</code></td>
+<td></td>
+<td>slider的selector</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>object</code></td>
+<td></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.step]</td>
+<td><code>number</code></td>
+<td></td>
+<td>slider的step，每次移动的百分比，取值范围 [0-100]</td>
+</tr>
+<tr>
+<td>[options.defaultValue]</td>
+<td><code>number</code></td>
+<td><code>0</code></td>
+<td>slider的默认百分比值，取值范围 [0-100]</td>
+</tr>
+<tr>
+<td>[options.onChange]</td>
+<td><code>function</code></td>
+<td></td>
+<td>slider发生改变时返回对应的百分比，取值范围 [0-100]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong>  </p>
+<h3 id="html"><a href="#html" class="headerlink" title="html"></a>html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-slider-box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"slider"</span> <span class="attr">class</span>=<span class="string">"weui-slider"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-slider__inner"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-slider__track"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-slider__handler"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"sliderValue"</span> <span class="attr">class</span>=<span class="string">"weui-slider-box__value"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">weui.slider(<span class="string">'#slider'</span>, &#123;</span><br><span class="line">    step: <span class="number">10</span>,</span><br><span class="line">    defaultValue: <span class="number">40</span>,</span><br><span class="line">    onChange: <span class="function"><span class="keyword">function</span>(<span class="params">percent</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(percent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"tab"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="tab-selector-options"><a href="#tab-selector-options" class="headerlink" title="tab(selector, [options])"></a>tab(selector, [options])</h2><p>tab tab导航栏</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector</td>
+<td><code>string</code></td>
+<td></td>
+<td>tab的selector</td>
+</tr>
+<tr>
+<td>[options]</td>
+<td><code>object</code></td>
+<td></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.defaultIndex]</td>
+<td><code>number</code></td>
+<td><code>0</code></td>
+<td>初始展示的index</td>
+</tr>
+<tr>
+<td>[options.onChange]</td>
+<td><code>function</code></td>
+<td></td>
+<td>点击tab时，返回对应的index</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong>  </p>
+<h3 id="html-1"><a href="#html-1" class="headerlink" title="html"></a>html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-tab"</span> <span class="attr">id</span>=<span class="string">"tab"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-navbar"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-navbar__item"</span>&gt;</span>反馈<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-navbar__item"</span>&gt;</span>表单<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-navbar__item"</span>&gt;</span>上传<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-navbar__item"</span>&gt;</span>其它<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-tab__panel"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-tab__content"</span>&gt;</span>反馈页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-tab__content"</span>&gt;</span>表单页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-tab__content"</span>&gt;</span>上传页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-tab__content"</span>&gt;</span>其它页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="js-1"><a href="#js-1" class="headerlink" title="js"></a>js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">weui.tab(<span class="string">'#tab'</span>,&#123;</span><br><span class="line">    defaultIndex: <span class="number">0</span>,</span><br><span class="line">    onChange: <span class="function"><span class="keyword">function</span>(<span class="params">index</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(index);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"toast"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="toast-content-options"><a href="#toast-content-options" class="headerlink" title="toast(content, options)"></a>toast(content, options)</h2><p>toast 一般用于操作成功时的提示场景</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td><code>string</code></td>
+<td></td>
+<td>toast的文字</td>
+</tr>
+<tr>
+<td>options</td>
+<td><code>Object</code> &#124; <code>function</code></td>
+<td></td>
+<td>配置项或回调</td>
+</tr>
+<tr>
+<td>[options.duration]</td>
+<td><code>number</code></td>
+<td><code>3000</code></td>
+<td>多少毫秒后关闭toast</td>
+</tr>
+<tr>
+<td>[options.callback]</td>
+<td><code>function</code></td>
+<td></td>
+<td>关闭后的回调</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td></td>
+<td>自定义类名</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">weui.toast(<span class="string">'操作成功'</span>, <span class="number">3000</span>);</span><br><span class="line">weui.toast(<span class="string">'操作成功'</span>, &#123;</span><br><span class="line">    duration: <span class="number">3000</span>,</span><br><span class="line">    className: <span class="string">'custom-classname'</span>,</span><br><span class="line">    callback: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'close'</span>) &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"topTips"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="topTips-content-options"><a href="#topTips-content-options" class="headerlink" title="topTips(content, options)"></a>topTips(content, options)</h2><p>toptips 顶部报错提示</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>content</td>
+<td><code>string</code></td>
+<td></td>
+<td>报错的文字</td>
+</tr>
+<tr>
+<td>options</td>
+<td><code>number</code> &#124; <code>function</code> &#124; <code>object</code></td>
+<td></td>
+<td>多少毫秒后消失</td>
+<td>消失后的回调</td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.duration]</td>
+<td><code>number</code></td>
+<td><code>3000</code></td>
+<td>多少毫秒后消失</td>
+</tr>
+<tr>
+<td>[options.className]</td>
+<td><code>string</code></td>
+<td></td>
+<td>自定义类名</td>
+</tr>
+<tr>
+<td>[options.callback]</td>
+<td><code>function</code></td>
+<td></td>
+<td>消失后的回调</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">weui.topTips(<span class="string">'请填写正确的字段'</span>);</span><br><span class="line">weui.topTips(<span class="string">'请填写正确的字段'</span>, <span class="number">3000</span>);</span><br><span class="line">weui.topTips(<span class="string">'请填写正确的字段'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'close'</span>) &#125;);</span><br><span class="line">weui.topTips(<span class="string">'请填写正确的字段'</span>, &#123;</span><br><span class="line">    duration: <span class="number">3000</span>,</span><br><span class="line">    className: <span class="string">'custom-classname'</span>,</span><br><span class="line">    callback: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="built_in">console</span>.log(<span class="string">'close'</span>) &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 主动关闭</span></span><br><span class="line"><span class="keyword">var</span> $topTips = weui.topTips(<span class="string">'请填写正确的字段'</span>);</span><br><span class="line">$topTips.hide(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="built_in">console</span>.log(<span class="string">'`topTips` has been hidden'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">name</span>=<span class="string">"uploader"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="uploader-selector-options"><a href="#uploader-selector-options" class="headerlink" title="uploader(selector, options)"></a>uploader(selector, options)</h2><p>uploader 上传组件</p>
+<p><strong>Kind</strong>: global function  </p>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>selector</td>
+<td><code>string</code></td>
+<td></td>
+<td>上传组件的selector</td>
+</tr>
+<tr>
+<td>options</td>
+<td><code>object</code></td>
+<td></td>
+<td>配置项</td>
+</tr>
+<tr>
+<td>[options.url]</td>
+<td><code>string</code></td>
+<td></td>
+<td>上传的url，返回值需要使用json格式</td>
+</tr>
+<tr>
+<td>[options.auto]</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>设置为<code>true</code>后，不需要手动调用上传，有文件选择即开始上传。用this.upload()来上传，详情请看example</td>
+</tr>
+<tr>
+<td>[options.type]</td>
+<td><code>string</code></td>
+<td><code>&quot;file&quot;</code></td>
+<td>上传类型, <code>file</code>为文件上传; <code>base64</code>为以base64上传</td>
+</tr>
+<tr>
+<td>[options.fileVal]</td>
+<td><code>string</code></td>
+<td><code>&quot;file&quot;</code></td>
+<td>文件上传域的name</td>
+</tr>
+<tr>
+<td>[options.compress]</td>
+<td><code>object</code></td>
+<td></td>
+<td>压缩配置, <code>false</code>则不压缩</td>
+</tr>
+<tr>
+<td>[options.compress.width]</td>
+<td><code>number</code></td>
+<td><code>1600</code></td>
+<td>图片的最大宽度</td>
+</tr>
+<tr>
+<td>[options.compress.height]</td>
+<td><code>number</code></td>
+<td><code>1600</code></td>
+<td>图片的最大高度</td>
+</tr>
+<tr>
+<td>[options.compress.quality]</td>
+<td><code>number</code></td>
+<td><code>.8</code></td>
+<td>压缩质量, 取值范围 0 ~ 1</td>
+</tr>
+<tr>
+<td>[options.onBeforeQueued]</td>
+<td><code>function</code></td>
+<td></td>
+<td>文件添加前的回调，return false则不添加</td>
+</tr>
+<tr>
+<td>[options.onQueued]</td>
+<td><code>function</code></td>
+<td></td>
+<td>文件添加成功的回调</td>
+</tr>
+<tr>
+<td>[options.onBeforeSend]</td>
+<td><code>function</code></td>
+<td></td>
+<td>文件上传前调用，具体参数看example</td>
+</tr>
+<tr>
+<td>[options.onSuccess]</td>
+<td><code>function</code></td>
+<td></td>
+<td>上传成功的回调</td>
+</tr>
+<tr>
+<td>[options.onProgress]</td>
+<td><code>function</code></td>
+<td></td>
+<td>上传进度的回调</td>
+</tr>
+<tr>
+<td>[options.onError]</td>
+<td><code>function</code></td>
+<td></td>
+<td>上传失败的回调</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong>  </p>
+<h3 id="html-2"><a href="#html-2" class="headerlink" title="html"></a>html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-cells weui-cells_form"</span> <span class="attr">id</span>=<span class="string">"uploader"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-cell"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-cell__bd"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-uploader"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-uploader__hd"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">"weui-uploader__title"</span>&gt;</span>图片上传<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-uploader__info"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"uploadCount"</span>&gt;</span>0<span class="tag">&lt;/<span class="name">span</span>&gt;</span>/5<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-uploader__bd"</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"weui-uploader__files"</span> <span class="attr">id</span>=<span class="string">"uploaderFiles"</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"weui-uploader__input-box"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"uploaderInput"</span> <span class="attr">class</span>=<span class="string">"weui-uploader__input"</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">accept</span>=<span class="string">"image/*"</span> <span class="attr">capture</span>=<span class="string">"camera"</span> <span class="attr">multiple</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="js-2"><a href="#js-2" class="headerlink" title="js"></a>js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> uploadCount = <span class="number">0</span>;</span><br><span class="line">weui.uploader(<span class="string">'#uploader'</span>, &#123;</span><br><span class="line">   url: <span class="string">'http://localhost:8081'</span>,</span><br><span class="line">   auto: <span class="literal">true</span>,</span><br><span class="line">   type: <span class="string">'file'</span>,</span><br><span class="line">   fileVal: <span class="string">'fileVal'</span>,</span><br><span class="line">   compress: &#123;</span><br><span class="line">       width: <span class="number">1600</span>,</span><br><span class="line">       height: <span class="number">1600</span>,</span><br><span class="line">       quality: <span class="number">.8</span></span><br><span class="line">   &#125;,</span><br><span class="line">   onBeforeQueued: <span class="function"><span class="keyword">function</span>(<span class="params">files</span>) </span>&#123;</span><br><span class="line">       <span class="comment">// `this` 是轮询到的文件, `files` 是所有文件</span></span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span>([<span class="string">"image/jpg"</span>, <span class="string">"image/jpeg"</span>, <span class="string">"image/png"</span>, <span class="string">"image/gif"</span>].indexOf(<span class="keyword">this</span>.type) &lt; <span class="number">0</span>)&#123;</span><br><span class="line">           weui.alert(<span class="string">'请上传图片'</span>);</span><br><span class="line">           <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 阻止文件添加</span></span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span>(<span class="keyword">this</span>.size &gt; <span class="number">10</span> * <span class="number">1024</span> * <span class="number">1024</span>)&#123;</span><br><span class="line">           weui.alert(<span class="string">'请上传不超过10M的图片'</span>);</span><br><span class="line">           <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span> (files.length &gt; <span class="number">5</span>) &#123; <span class="comment">// 防止一下子选择过多文件</span></span><br><span class="line">           weui.alert(<span class="string">'最多只能上传5张图片，请重新选择'</span>);</span><br><span class="line">           <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span> (uploadCount + <span class="number">1</span> &gt; <span class="number">5</span>) &#123;</span><br><span class="line">           weui.alert(<span class="string">'最多只能上传5张图片'</span>);</span><br><span class="line">           <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       ++uploadCount;</span><br><span class="line"></span><br><span class="line">       <span class="comment">// return true; // 阻止默认行为，不插入预览图的框架</span></span><br><span class="line">   &#125;,</span><br><span class="line">   onQueued: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line"></span><br><span class="line">       <span class="comment">// console.log(this.status); // 文件的状态：'ready', 'progress', 'success', 'fail'</span></span><br><span class="line">       <span class="comment">// console.log(this.base64); // 如果是base64上传，file.base64可以获得文件的base64</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">// this.upload(); // 如果是手动上传，这里可以通过调用upload来实现；也可以用它来实现重传。</span></span><br><span class="line">       <span class="comment">// this.stop(); // 中断上传</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">// return true; // 阻止默认行为，不显示预览图的图像</span></span><br><span class="line">   &#125;,</span><br><span class="line">   onBeforeSend: <span class="function"><span class="keyword">function</span>(<span class="params">data, headers</span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="keyword">this</span>, data, headers);</span><br><span class="line">       <span class="comment">// $.extend(data, &#123; test: 1 &#125;); // 可以扩展此对象来控制上传参数</span></span><br><span class="line">       <span class="comment">// $.extend(headers, &#123; Origin: 'http://127.0.0.1' &#125;); // 可以扩展此对象来控制上传头部</span></span><br><span class="line"></span><br><span class="line">       <span class="comment">// return false; // 阻止文件上传</span></span><br><span class="line">   &#125;,</span><br><span class="line">   onProgress: <span class="function"><span class="keyword">function</span>(<span class="params">procent</span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="keyword">this</span>, procent);</span><br><span class="line">       <span class="comment">// return true; // 阻止默认行为，不使用默认的进度显示</span></span><br><span class="line">   &#125;,</span><br><span class="line">   onSuccess: <span class="function"><span class="keyword">function</span> (<span class="params">ret</span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="keyword">this</span>, ret);</span><br><span class="line">       <span class="comment">// return true; // 阻止默认行为，不使用默认的成功态</span></span><br><span class="line">   &#125;,</span><br><span class="line">   onError: <span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="keyword">this</span>, err);</span><br><span class="line">       <span class="comment">// return true; // 阻止默认行为，不使用默认的失败态</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Henry.Cai 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Henry.Cai 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/HTML5/" rel="tag"># HTML5</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/css3/" rel="tag"># css3</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/22/21/" rel="next" title="前端常用UI框架集合">
+                <i class="fa fa-chevron-left"></i> 前端常用UI框架集合
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/05/23/25/" rel="prev" title="使用angularJs+webpack搭建兼容IE8单页应用工程">
+                使用angularJs+webpack搭建兼容IE8单页应用工程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc2Ni8xMTMwMw"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.png"
+                alt="Henry.Cai" />
+            
+              <p class="site-author-name" itemprop="name">Henry.Cai</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#actionSheet-menus-actions-options"><span class="nav-number">1.</span> <span class="nav-text">actionSheet(menus, actions, [options])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#alert-content-yes-options"><span class="nav-number">2.</span> <span class="nav-text">alert(content, [yes], [options])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#confirm-content-yes-no-options"><span class="nav-number">3.</span> <span class="nav-text">confirm(content, [yes], [no], [options])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dialog-options"><span class="nav-number">4.</span> <span class="nav-text">dialog([options])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#form"><span class="nav-number">5.</span> <span class="nav-text">form</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Functions"><span class="nav-number">5.1.</span> <span class="nav-text">Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#validate-selector-callback-options"><span class="nav-number">5.1.1.</span> <span class="nav-text">validate(selector, callback, [options])</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#普通input的HTML"><span class="nav-number">5.1.1.1.</span> <span class="nav-text">普通input的HTML</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#radio"><span class="nav-number">5.1.1.2.</span> <span class="nav-text">radio</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#checkbox"><span class="nav-number">5.1.1.3.</span> <span class="nav-text">checkbox</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#checkIfBlur-selector-options"><span class="nav-number">5.1.2.</span> <span class="nav-text">checkIfBlur(selector, [options])</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#showErrorTips-error"><span class="nav-number">5.1.3.</span> <span class="nav-text">showErrorTips(error)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hideErrorTips-ele"><span class="nav-number">5.1.4.</span> <span class="nav-text">hideErrorTips(ele)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gallery-url-options"><span class="nav-number">6.</span> <span class="nav-text">gallery(url, [options])</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#loading-content-options"><span class="nav-number">7.</span> <span class="nav-text">loading(content, [options])</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Functions-1"><span class="nav-number">7.1.</span> <span class="nav-text">Functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#picker-items-options"><span class="nav-number">8.</span> <span class="nav-text">picker(items, options)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#datePicker-options"><span class="nav-number">9.</span> <span class="nav-text">datePicker(options)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#slider-selector-options"><span class="nav-number">10.</span> <span class="nav-text">slider(selector, [options])</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#html"><span class="nav-number">10.1.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js"><span class="nav-number">10.2.</span> <span class="nav-text">js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tab-selector-options"><span class="nav-number">11.</span> <span class="nav-text">tab(selector, [options])</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#html-1"><span class="nav-number">11.1.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-1"><span class="nav-number">11.2.</span> <span class="nav-text">js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#toast-content-options"><span class="nav-number">12.</span> <span class="nav-text">toast(content, options)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#topTips-content-options"><span class="nav-number">13.</span> <span class="nav-text">topTips(content, options)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uploader-selector-options"><span class="nav-number">14.</span> <span class="nav-text">uploader(selector, options)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#html-2"><span class="nav-number">14.1.</span> <span class="nav-text">html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-2"><span class="nav-number">14.2.</span> <span class="nav-text">js</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2015 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Henry.Cai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
